@@ -11,6 +11,11 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "procons": [
+        "./dist/procons"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -22,5 +27,19 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/procons/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/procons/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/demo-procons/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/demo-procons/tsconfig.spec.json"
+    }
+  ]
 }
