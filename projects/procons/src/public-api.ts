@@ -2,4 +2,5 @@
  * Public API Surface of procons
  */
 
-export * from './lib/procons';
+export * from './lib/interfaces';
+export * from './lib/components';

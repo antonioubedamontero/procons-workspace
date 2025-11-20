@@ -1,0 +1,21 @@
+<div class="procons-list">
+  <div class="procons-list__add-button">
+    <button matButton="filled" (click)="addNewElement()">
+      <mat-icon>add_circle</mat-icon>
+      <span>Añadir</span>
+    </button>
+  </div>
+
+  @for (proconsFormGroup of proconsFormGroups(); track getDescriptionFromGroup(proconsFormGroup);
+  let pos=$index) {
+  <!-- -->
+  <div class="procons-list__item">
+    <lib-procons-list-item
+      [listItemFormGroup]="proconsFormGroup"
+      [listItemType]="listItemType()"
+      (deleteButtonPressed)="deleteButtonPressed(pos)"
+    />
+  </div>
+  <!-- -->
+  }
+</div>

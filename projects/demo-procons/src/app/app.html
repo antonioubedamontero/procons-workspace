@@ -1,1 +1,32 @@
-<lib-procons />
+<section class="procons">
+  <h1>Demo componentes de Procons</h1>
+
+  <article class="procons__components">
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>ProconsListItem</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>
+          Mostrar un campo de texto y un rango de 0 a 10 para completar las ventajas o desventajas
+          según corresponda.
+        </p>
+
+        <lib-procons-list-item [listItemFormGroup]="firstElement" listItemType="pro" />
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>ProconsList</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>Mostrar una lista de procons list items.</p>
+
+        <lib-procons-list [proconsListData]="proconsFormArray" listItemType="pro" />
+      </mat-card-content>
+    </mat-card>
+  </article>
+</section>

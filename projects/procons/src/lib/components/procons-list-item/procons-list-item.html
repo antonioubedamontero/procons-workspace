@@ -1,0 +1,25 @@
+<div class="procons-list-item">
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [formControl]="getControlFromGroup('description')"
+      [placeholder]="placeHolderMessage()"
+    />
+  </mat-form-field>
+
+  <div class="procons-list-item__slider-container">
+    <mat-slider [min]="0" [max]="10" [step]="1" tickInterval="1">
+      <input matSliderThumb [formControl]="getControlFromGroup('score')" />
+    </mat-slider>
+
+    <span class="value">
+      {{ getControlFromGroup('score').value }}
+    </span>
+  </div>
+
+  <div class="delete-button">
+    <button matFab (click)="sendDeleteNotification()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
