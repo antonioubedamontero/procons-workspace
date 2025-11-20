@@ -26,6 +26,16 @@
           "options": {
             "tsConfig": "projects/procons/tsconfig.spec.json"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/procons/**/*.ts",
+              "projects/procons/**/*.html"
+            ],
+            "eslintConfig": "projects/procons/eslint.config.js"
+          }
         }
       }
     },

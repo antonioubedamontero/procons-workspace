@@ -15,3 +15,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Install Angular Material and add to library peer dependencies.
 - Added scripts to build library and with watch.
 - Added component example from demo app library.
+
+## [0.2.0] - 2025-11-20
+
+### Added
+
+- Created Procons list item component and interface.
+- Expose component and interface in public-api.
+- Added uuid library.
+
+### Changed
+
+- README.md information.
+
+### Removed
+
+- Library procons example application.

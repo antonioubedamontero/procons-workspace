@@ -1,0 +1,3 @@
+FIX:
+- Add custom validator to show an error if description is repeated.
+- Show errors below description field.
