@@ -6,15 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [0.1.0] - 2025-11-20
+## [0.2.1] - 2025-11-25
+
+### Fixed
+
+- Fixed error "Error: NG0908: In this configuration Angular requires Zone.js", installing zone.js and adding zone.js and
+  zone.js/testing to polyfills in angular.json.
+- Basic procons-list-item test to prove fix works.
+
+### Changed
+
+- Changed README.md to add scripts and more details.
 
 ### Added
 
-- Created workspace and library.
-- Created demo application to test library components.
-- Install Angular Material and add to library peer dependencies.
-- Added scripts to build library and with watch.
-- Added component example from demo app library.
+- Added new scrip for testing.
 
 ## [0.2.0] - 2025-11-20
 
@@ -31,3 +37,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 - Library procons example application.
+
+## [0.1.0] - 2025-11-20
+
+### Added
+
+- Created workspace and library.
+- Created demo application to test library components.
+- Install Angular Material and add to library peer dependencies.
+- Added scripts to build library and with watch.
+- Added component example from demo app library.

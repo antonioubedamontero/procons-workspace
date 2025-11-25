@@ -24,16 +24,14 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/procons/tsconfig.spec.json"
+            "tsConfig": "projects/procons/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/procons/**/*.ts",
-              "projects/procons/**/*.html"
-            ],
+            "lintFilePatterns": ["projects/procons/**/*.ts", "projects/procons/**/*.html"],
             "eslintConfig": "projects/procons/eslint.config.js"
           }
         }
@@ -54,9 +52,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/demo-procons/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/demo-procons/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -65,9 +61,7 @@
                 "input": "projects/demo-procons/public"
               }
             ],
-            "styles": [
-              "projects/demo-procons/src/styles.scss"
-            ]
+            "styles": ["projects/demo-procons/src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -111,10 +105,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/demo-procons/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -123,9 +114,7 @@
                 "input": "projects/demo-procons/public"
               }
             ],
-            "styles": [
-              "projects/demo-procons/src/styles.scss"
-            ]
+            "styles": ["projects/demo-procons/src/styles.scss"]
           }
         }
       }
