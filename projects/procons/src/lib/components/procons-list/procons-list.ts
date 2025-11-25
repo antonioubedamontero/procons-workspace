@@ -4,8 +4,9 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { ListItemType } from '../../interfaces';
+import { ListItemType, ProconsListItemDataControls } from '../../interfaces';
 import { ProconsListItem } from '../procons-list-item/procons-list-item';
+import { duplicationDescriptionValidator } from '../../validators';
 
 @Component({
   selector: 'lib-procons-list',
@@ -17,7 +18,7 @@ import { ProconsListItem } from '../procons-list-item/procons-list-item';
 export class ProconsList {
   private fb = inject(FormBuilder);
 
-  proconsListData = input<FormArray>(this.fb.array([]));
+  proconsListData = input<FormArray>(this.fb.array([], duplicationDescriptionValidator()));
   listItemType = input.required<ListItemType>();
 
   proconsFormGroups = computed(() => {
