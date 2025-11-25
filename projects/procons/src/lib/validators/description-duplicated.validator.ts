@@ -14,10 +14,6 @@ export function duplicationDescriptionValidator(): ValidatorFn {
       return group.get('description')?.value ?? '';
     });
 
-    if (!formArrayControls) {
-      return null;
-    }
-
     const uniqueDescriptions = new Set(formArrayValues);
 
     return formArrayValues.length !== uniqueDescriptions.size

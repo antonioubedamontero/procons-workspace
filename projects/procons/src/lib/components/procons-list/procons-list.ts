@@ -4,7 +4,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { ListItemType, ProconsListItemDataControls } from '../../interfaces';
+import { ListItemType } from '../../interfaces';
 import { ProconsListItem } from '../procons-list-item/procons-list-item';
 import { duplicationDescriptionValidator } from '../../validators';
 
