@@ -2,12 +2,17 @@
   <mat-form-field appearance="outline">
     <input
       matInput
+      id="description"
       [formControl]="getControlFromGroup('description')"
       [placeholder]="placeHolderMessage()"
     />
+
+    @if (hasError('description')) {
+    <mat-error>{{ getErrorsFromField('description') }}</mat-error>
+    }
   </mat-form-field>
 
-  <div class="procons-list-item__slider-container">
+  <div id="score-slider-container" class="procons-list-item__slider-container">
     <mat-slider [min]="0" [max]="10" [step]="1" tickInterval="1">
       <input matSliderThumb [formControl]="getControlFromGroup('score')" />
     </mat-slider>

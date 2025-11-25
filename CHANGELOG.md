@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.0] - 2025-11-25
+
+### Added
+
+- Add testing for components.
+
 ## [0.2.1] - 2025-11-25
 
 ### Fixed
