@@ -10,6 +10,9 @@
     "serve:demo-procons": "ng serve demo-procons",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:procons": "ng test procons",
+    "test:procons:coverage": "ng test procons --code-coverage",
+    "test:procons:chrome-headless": "ng test procons --browsers=ChromeHeadless --watch=false",
     "lint": "ng lint"
   },
   "prettier": {
@@ -36,7 +39,7 @@
     "@angular/router": "^20.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
     "@angular/build": "^20.3.11",

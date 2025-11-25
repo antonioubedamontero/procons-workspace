@@ -1,59 +1,43 @@
-# ProconsWorkspace
+# Procons Angular Library
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+**Procons** is an Angular library designed to provide a collection of component to use as a part of private procons-app aplication.
 
-## Development server
+## Library installation
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Install the package via npm or yarn:
 
 ```bash
-ng generate component component-name
+npm install procons
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Testing in development
 
 ```bash
-ng generate --help
+ng serve demo-procons
 ```
 
-## Building
-
-To build the project run:
+## Linting application
 
 ```bash
-ng build
+npm run lint
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Testing script library
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Testing procons library
 
 ```bash
-ng test
+npm run test:procons
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Recovering procons code coverage
 
 ```bash
-ng e2e
+npm run test:procons:coverage
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Recovering procons code coverage
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run test:procons:chrome-headless
+```

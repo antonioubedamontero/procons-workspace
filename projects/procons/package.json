@@ -1,11 +1,14 @@
 {
   "name": "procons",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "peerDependencies": {
     "@angular/cdk": "^20.2.14",
     "@angular/common": "^20.3.0",
     "@angular/core": "^20.3.0",
     "@angular/material": "^20.2.14"
+  },
+  "devDependencies": {
+    "zone.js": "^0.15.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"
