@@ -1,3 +1,2 @@
 FIX:
-- Field error is not showing properly.
-- Add custom validator to procons-list-page.
+- Duplications messages are not shown.

@@ -1,63 +1,122 @@
-# Procons
+# 📚 Procons Library
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+**Procons** is a private Angular UI library created exclusively for the **procons-app** project.
 
-## Code scaffolding
+It provides reusable components for managing **pros and cons** items, including validated text inputs, scoring sliders, and delete actions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This library is not intended for public use or distribution outside the procons-app ecosystem.
+
+## 🔒 Project Status: Private
+
+This package is designed only for internal use within **procons-app**.  
+External usage, redistribution, or publication as a public npm package is not supported.
+
+## ✨ Features
+
+- 🚀 Standalone Angular components (Angular 20)
+- 📋 Reactive Forms support
+- ⚠️ Built-in validation and error messages
+- 🎚️ Angular Material slider integration
+- 🗑️ Delete event output
+- 🧹 OnPush change detection for optimized UI performance
+- 🔗 Easy integration into procons-app modules and components
+
+## 📦 Installation (Internal Only)
+
+Inside **procons-app**, install the library as a dependency:
 
 ```bash
-ng generate component component-name
+npm install procons
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+_(Only works within the private workspace or internal registry.)_
 
-```bash
-ng generate --help
+## 🔧 Usage Example (Standalone Component – Angular 20)
+
+```ts
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProconsListItem } from 'procons';
+
+@Component({
+  selector: 'app-demo',
+  standalone: true,
+  imports: [ProconsListItem],
+  template: `
+    <h2>Pros</h2>
+
+    <lib-procons-list-item
+      [listItemType]="'pro'"
+      [listItemFormGroup]="proForm"
+      (deleteButtonPressed)="handleDelete()"
+    ></lib-procons-list-item>
+
+    <h2>Cons</h2>
+
+    <lib-procons-list-item
+      [listItemType]="'con'"
+      [listItemFormGroup]="conForm"
+      (deleteButtonPressed)="handleDelete()"
+    ></lib-procons-list-item>
+  `,
+})
+export class DemoComponent {
+  proForm = new FormGroup({
+    description: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    score: new FormControl(5),
+  });
+
+  conForm = new FormGroup({
+    description: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    score: new FormControl(5),
+  });
+
+  handleDelete() {
+    console.log('Item deleted!');
+  }
+}
 ```
 
-## Building
+## 🧩 Component API
 
-To build the library, run:
+### `<lib-procons-list-item>`
+
+| Input               | Type                                     | Description                      |
+| ------------------- | ---------------------------------------- | -------------------------------- |
+| `listItemType`      | `'pro' \| 'con'`                         | Controls placeholder text        |
+| `listItemFormGroup` | `FormGroup<ProconsListItemDataControls>` | Reactive form group for the item |
+
+| Output                | Type      | Description                             |
+| --------------------- | --------- | --------------------------------------- |
+| `deleteButtonPressed` | `boolean` | Fired when the delete button is clicked |
+
+## 📁 Required Form Structure
+
+```ts
+interface ProconsListItemDataControls {
+  description: FormControl<string>;
+  score: FormControl<number>;
+}
+```
+
+## 🛠 Development
 
 ```bash
+npm install
 ng build procons
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+The built library will be generated in:
 
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/procons
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+/dist/procons
 ```
 
-## Running end-to-end tests
+## 📄 Changelog
 
-For end-to-end (e2e) testing, run:
+See the `CHANGELOG.md` file for version history.
 
-```bash
-ng e2e
-```
+## 📜 License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This library is part of the private **procons-app** project.  
+All rights reserved. Not for external distribution.

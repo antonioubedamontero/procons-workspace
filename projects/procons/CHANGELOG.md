@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.1] - 2025-11-27
+
+### Fixed
+
+- Fix not shown errors.
+
+### Added
+
+- copy README.md from workspace to library.
+
 ## [0.3.0] - 2025-11-25
 
 ### Added
@@ -23,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - Changed README.md to add scripts and more details.
+- Move CHANGELOG.md from workspace to library.
 
 ### Added
 

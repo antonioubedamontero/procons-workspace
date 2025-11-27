@@ -19,3 +19,7 @@
   <!-- -->
   }
 </div>
+
+@if(hasDuplicationMessageError()) {
+<mat-error> No se pueden incluir descripciones duplicadas </mat-error>
+}
