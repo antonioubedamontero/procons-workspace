@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.2] - 2025-11-28
+
+### Fixed
+
+- Fixed builded app.
+
 ## [0.3.1] - 2025-11-27
 
 ### Fixed
