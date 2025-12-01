@@ -8,11 +8,17 @@ import {
 
 export function duplicationDescriptionValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
+    if (!control) return null;
+
     const formArrayControls = (control as FormArray).controls as FormGroup[];
 
-    const formArrayValues: string[] = formArrayControls.map((group) => {
-      return group.get('description')?.value ?? '';
-    });
+    const formArrayValues: string[] = formArrayControls
+      .filter((group) => {
+        return group.get('description')?.value.length > 0;
+      })
+      .map((group) => {
+        return group.get('description')?.value;
+      });
 
     const uniqueDescriptions = new Set(formArrayValues);
 
