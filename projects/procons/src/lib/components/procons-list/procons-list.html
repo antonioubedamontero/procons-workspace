@@ -6,8 +6,7 @@
     </button>
   </div>
 
-  @for (proconsFormGroup of proconsFormGroups(); track getDescriptionFromGroup(proconsFormGroup);
-  let pos=$index) {
+  @for (proconsFormGroup of proconsFormGroups(); track $index; let pos=$index) {
   <!-- -->
   <div class="procons-list__item">
     <lib-procons-list-item

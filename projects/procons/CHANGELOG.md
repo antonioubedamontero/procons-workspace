@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.0] - 2025-11-28
+
+### Fixed
+
+- Fixed validation duplication error.
+
+### Changed
+
+- Duplication description validator internal changes to ignore empty descriptions.
+- proconsListData is now required in ProconsList component.
+- Duplication description validator should be filled in form, not
+  inside ProconsList component.
+
 ## [0.3.2] - 2025-11-28
 
 ### Fixed

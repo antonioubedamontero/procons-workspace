@@ -16,7 +16,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { ListItemType } from '../../interfaces';
-import { duplicationDescriptionValidator } from '../../validators';
 import { ProconsListItem } from '../procons-list-item/procons-list-item';
 
 @Component({
@@ -29,7 +28,7 @@ import { ProconsListItem } from '../procons-list-item/procons-list-item';
 export class ProconsList implements OnInit, OnDestroy {
   private fb = inject(FormBuilder);
 
-  proconsListData = input<FormArray>(this.fb.array([], duplicationDescriptionValidator()));
+  proconsListData = input.required<FormArray>();
   listItemType = input.required<ListItemType>();
 
   proconsFormGroups = computed(() => {
@@ -74,8 +73,8 @@ export class ProconsList implements OnInit, OnDestroy {
 
   hasDuplicationMessageError(): boolean {
     const proconsListFormArray = this.proconsListData();
-    return (
-      proconsListFormArray.invalid && (proconsListFormArray.touched || proconsListFormArray.dirty)
-    );
+    const hasduplicationError = proconsListFormArray.hasError('duplicateDescriptions');
+
+    return hasduplicationError && (proconsListFormArray.touched || proconsListFormArray.dirty);
   }
 }
